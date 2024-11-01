@@ -16,16 +16,23 @@ const { title = 'te olvidaste del titulo' , msg = "hola mundo cruel" } = Astro.p
 		<header class="bg-orange-400 h-20">
 			
 		</header>
-		<menu class="bg-blue-500 flex justify-center">
-			<li><a class="hover:bg-white/25 px-2" href="/">Inicio</a></li>
+		<menu class="bg-blue-500 flex justify-center font-fuenteRela">
+			<li><a class="hover:bg-white/25 px-2 font-fuenteRela" href="/">Inicio</a></li>
 			<li><a class="hover:bg-white/25 px-2" href="/quienes-somos">quienes somos</a></li>
 			<li><a class="hover:bg-white/25 px-2" href="/organigrama">Organigrama</a></li>
 			<li><a class="hover:bg-white/25 px-2" href="/contacto">contacto</a></li>
 		</menu>
-		<p>tu mensaje es : {msg}</p>
-
-
+		<p class="">tu mensaje es : {msg}</p>
 		<slot />
 	</body>
 </html>
+<style is:global>
+	@font-face {
+  font-family: 'fuenteRela';
+  src: url('/fonts/Nosifer-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+</style>
 
