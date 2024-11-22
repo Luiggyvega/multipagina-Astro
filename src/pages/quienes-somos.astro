@@ -1,9 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Notifivation from "../components/vue/Notifivation.vue";
+import Slider from "../components/vue/Slider.vue";
+import ImagenSlider from "../components/ImagenSlider.astro";
+import SliderImg from "../components/vue/SliderImg.vue";
 ---
 
 <Layout title="quienes-Somos">
     Esta es la seccion de quienes somos.
     <Notifivation client:load/>
+    <Slider client:load slides2={["slide1", "slide2"]}/>
+    <ImagenSlider></ImagenSlider>
 </Layout>
