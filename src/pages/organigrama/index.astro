@@ -1,7 +1,20 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+const items =["perro", "gato", "unicornio"];
+const visible = false;
+
 ---
 
 <Layout>
     Esta la info del organigrama
+    <ul>
+        {
+            items.map((items)=>
+                <li>{items}</li>
+        )
+        }
+    </ul>
+
+    {visible && <p> muestramelo pues</p> }
+    {visible ? <p>muestramelo facil</p> : <p>si no, muestramelo dificil</p> }
 </Layout>
